@@ -1,0 +1,6 @@
+{
+  "name": "Restkiwi",
+  "tagline": "simple rest key value store",
+  "body": "### restkiwi\r\n![kiwi](https://pixabay.com/static/uploads/photo/2013/07/13/13/53/kiwi-161728_960_720.png)\r\nA simple kv store you can write/read via http requests.\r\n\r\n```sh\r\n$ curl --data '{\"foo\": \"bar\", \"blub\": [1,2,\"hello\"]}' localhost:8888/mykey\r\n  \"yope\"\r\n\r\n$ curl localhost:8888/mykey\r\n  {\r\n    \"foo\": \"bar\",\r\n    \"blub\": [1, 2, \"hello\"]\r\n  }\r\n\r\n$ curl localhost:8888/mykey/foo\r\n  \"bar\"\r\n\r\n$ curl localhost:8888/mykey/blub/2\r\n  \"hello\"\r\n\r\n```\r\n\r\nLet the key expire after 100 seconds (default 70).\r\nSet to 0 if it should never expire.\r\n```sh\r\n$ curl localhost:8888/myotherkey?ttl=100\r\n  \"yope\"\r\n\r\n```\r\n\r\nAllow the key to be read and written by the current IP only.\r\n```sh\r\n$ curl localhost:8888/key?lock=2\r\n  \"yope\"\r\n```\r\n\r\nLet other IP's read the key but not write.\r\n```sh\r\n$ curl localhost:8888/key?lock=1\r\n  \"yope\"\r\n```\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
