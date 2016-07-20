@@ -1,7 +1,7 @@
 const server = require('../lib/restkiwi.js');
 const request = require('request');
 const assert = require('assert');
-const localip = "192.168.1.101"
+const localip = "10.3.3.3"
 
 describe('server response', () => {
   before(function () {
