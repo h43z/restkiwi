@@ -7,14 +7,10 @@
     "test": "NODE_ENV=test ./node_modules/.bin/mocha -R spec",
     "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@git.avdev.at:dev/restkv.git"
-  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^2.4.5",
-    "request": "^2.72.0"
+    "mocha": "^2.5.3",
+    "request": "^2.83.0"
   }
 }
