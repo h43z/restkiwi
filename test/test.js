@@ -1,7 +1,7 @@
 const server = require('../lib/restkiwi.js')
 const request = require('request')
 const assert = require('assert')
-const localip = "192.168.1.201"
+const localip = "192.168.1.200"
 
 describe('server response', () => {
   before(function () {
@@ -18,7 +18,7 @@ describe('server response', () => {
 	})
 
 	it('should return error non-existent key/path', (done) => {
-		request.get('http://localhost:8888/key', (err, res, body) => {
+		request.get('http://localhost:8888/non_existing_key', (err, res, body) => {
       assert.equal(res.statusCode, 404)
       assert.equal('"error, non-existent key/path"', body)
 			done()
